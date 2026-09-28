@@ -9,8 +9,9 @@ Slides da aula: `aulas/aula-05.html` no site da UC.
 git clone https://github.com/Tiago-Rocha/pdm-aula-05.git
 cd pdm-aula-05/starter
 flutter pub get
-flutter run
 ```
+
+Abre a pasta `starter/` no VS Code. Na barra inferior, à direita, escolhe o dispositivo (o teu telemóvel) e carrega em F5.
 
 A app tem de aparecer no telemóvel com um texto no centro. Depois:
 
@@ -39,7 +40,7 @@ Até criares `lib/location_card.dart`, o ficheiro `test/location_card_test.dart`
 
 No fim, commit com a mensagem `feat: location card and fonts`.
 
-## Se o `flutter run` falhar no Android
+## Se a app não compilar para Android
 
 O projeto foi gerado com Flutter 3.47.5 e usa Gradle 9.5 e Android Gradle Plugin 9.1, que correm com qualquer Java de 17 a 26. Confirma que tens o Flutter atualizado: `flutter upgrade`. Se já tinhas clonado antes desta alteração, faz `git stash -u && git pull`. O `stash` guarda o que tinhas alterado, porque o `starter/` também mudou entretanto e o `pull` sozinho recusa. Os TODOs que já tinhas feito voltas a fazê-los no starter novo; são pequenos.
 
@@ -48,7 +49,7 @@ O projeto foi gerado com Flutter 3.47.5 e usa Gradle 9.5 e Android Gradle Plugin
    - Windows: `flutter config --jdk-dir "C:\Program Files\Android\Android Studio\jbr"`
    - macOS: `flutter config --jdk-dir "/Applications/Android Studio.app/Contents/jbr/Contents/Home"`
 3. `cmdline-tools component is missing` ou `Android license status unknown`: SDK Manager → SDK Tools → Command-line Tools (latest), depois `flutter doctor --android-licenses`.
-4. Download do Gradle interrompido: repete `flutter run`. Se continuar, apaga a pasta `.gradle` na tua pasta pessoal e repete.
+4. Download do Gradle interrompido: repete (F5). Se continuar, apaga a pasta `.gradle` na tua pasta pessoal e repete.
 5. Utilizador do Windows com espaços ou acentos no nome: vê a secção do guia de instalação.
 6. Quatro linhas `WARNING: A restricted method in java.lang.System has been called` no arranque do Gradle são normais com o Java 25 do Android Studio novo. Ignora-as; a compilação continua.
 
