@@ -50,6 +50,7 @@ O projeto foi gerado com Flutter 3.47.5 e usa Gradle 9.5 e Android Gradle Plugin
 3. `cmdline-tools component is missing` ou `Android license status unknown`: SDK Manager → SDK Tools → Command-line Tools (latest), depois `flutter doctor --android-licenses`.
 4. Download do Gradle interrompido: repete `flutter run`. Se continuar, apaga a pasta `.gradle` na tua pasta pessoal e repete.
 5. Utilizador do Windows com espaços ou acentos no nome: vê a secção do guia de instalação.
+6. Quatro linhas `WARNING: A restricted method in java.lang.System has been called` no arranque do Gradle são normais com o Java 25 do Android Studio novo. Ignora-as; a compilação continua.
 
 ## Trabalho de casa
 
