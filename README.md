@@ -11,7 +11,7 @@ cd pdm-aula-05/starter
 flutter pub get
 ```
 
-Abre a pasta `starter/` no VS Code. Na barra inferior, à direita, escolhe o dispositivo (o teu telemóvel) e carrega em F5.
+Abre a pasta `starter/` no VS Code. `Ctrl+Shift+P` → *Flutter: Select Device* → o teu Android. Depois F5: corre a configuração "Tempo Açores (debug)" que já vem no projeto, em `.vscode/launch.json`.
 
 A app tem de aparecer no telemóvel com um texto no centro. Depois:
 
