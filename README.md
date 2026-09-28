@@ -55,7 +55,7 @@ O projeto foi gerado com Flutter 3.47.5 e usa Gradle 9.5 e Android Gradle Plugin
 ## Trabalho de casa
 
 1. Completar os `TODO`s até o `flutter test` ficar verde.
-2. Só depois abrir `solucao/`, comparar e anotar as diferenças que não percebes. Trazê-las para a aula 6.
+2. Só depois abrir `solucao/`, comparar e anotar as diferenças que não percebes. Trazê-las para a próxima aula.
 3. Confirmar que o `.gitignore` está a excluir `build/` e `.dart_tool/` antes de fazer push.
 
 ## Créditos

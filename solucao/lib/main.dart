@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO 3: today's date. In English for now; pt_PT comes in class 9.
+    // TODO 3: today's date. In English for now; pt_PT comes later on.
     final today = DateFormat('EEEE, d MMMM').format(DateTime.now());
 
     return Scaffold(

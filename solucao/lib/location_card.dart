@@ -27,7 +27,7 @@ class LocationCard extends StatelessWidget {
             Icon(icon, size: 40, color: Colors.orange),
             const SizedBox(width: 16),
             // Expanded instead of Spacer: a long name such as "Angra do
-            // Heroísmo" shrinks instead of overflowing the Row. Why: class 6.
+            // Heroísmo" shrinks instead of overflowing the Row. Why: next class.
             Expanded(child: Text(name, style: textTheme.titleLarge)),
             Text('${temperature.round()} °C', style: textTheme.headlineMedium),
           ],
