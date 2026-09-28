@@ -41,7 +41,7 @@ No fim, commit com a mensagem `feat: location card and fonts`.
 
 ## Se o `flutter run` falhar no Android
 
-O projeto foi gerado com Flutter 3.47.5 e usa Gradle 9.5 e Android Gradle Plugin 9.1, que correm com qualquer Java de 17 a 26. Confirma que tens o Flutter atualizado: `flutter upgrade`. Se já tinhas clonado antes desta alteração, faz `git pull`.
+O projeto foi gerado com Flutter 3.47.5 e usa Gradle 9.5 e Android Gradle Plugin 9.1, que correm com qualquer Java de 17 a 26. Confirma que tens o Flutter atualizado: `flutter upgrade`. Se já tinhas clonado antes desta alteração, faz `git stash -u && git pull`. O `stash` guarda o que tinhas alterado, porque o `starter/` também mudou entretanto e o `pull` sozinho recusa. Os TODOs que já tinhas feito voltas a fazê-los no starter novo; são pequenos.
 
 1. `flutter doctor -v` e olha para a linha **Java version** dentro de Android toolchain. O Flutter usa, por esta ordem: `flutter config --jdk-dir`, a variável `JAVA_HOME`, o Java do Android Studio, o `java` do PATH.
 2. Se aparecer `Unsupported class file major version` ou `incompatible with the Java version`, o Flutter apanhou um Java instalado à parte. Aponta-o para o Java do Android Studio:
