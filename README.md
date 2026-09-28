@@ -39,6 +39,18 @@ Até criares `lib/location_card.dart`, o ficheiro `test/location_card_test.dart`
 
 No fim, commit com a mensagem `feat: location card and fonts`.
 
+## Se o `flutter run` falhar no Android
+
+O projeto usa Gradle 9.5 e Android Gradle Plugin 8.13, que correm com qualquer Java de 17 a 26. Se já tinhas clonado antes desta alteração, faz `git pull`.
+
+1. `flutter doctor -v` e olha para a linha **Java version** dentro de Android toolchain. O Flutter usa, por esta ordem: `flutter config --jdk-dir`, a variável `JAVA_HOME`, o Java do Android Studio, o `java` do PATH.
+2. Se aparecer `Unsupported class file major version` ou `incompatible with the Java version`, o Flutter apanhou um Java instalado à parte. Aponta-o para o Java do Android Studio:
+   - Windows: `flutter config --jdk-dir "C:\Program Files\Android\Android Studio\jbr"`
+   - macOS: `flutter config --jdk-dir "/Applications/Android Studio.app/Contents/jbr/Contents/Home"`
+3. `cmdline-tools component is missing` ou `Android license status unknown`: SDK Manager → SDK Tools → Command-line Tools (latest), depois `flutter doctor --android-licenses`.
+4. Download do Gradle interrompido: repete `flutter run`. Se continuar, apaga a pasta `.gradle` na tua pasta pessoal e repete.
+5. Utilizador do Windows com espaços ou acentos no nome: vê a secção do guia de instalação.
+
 ## Trabalho de casa
 
 1. Completar os `TODO`s até o `flutter test` ficar verde.
