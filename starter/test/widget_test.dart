@@ -1,5 +1,5 @@
-// Testes do ecrã principal. Corre com: flutter test
-// Começam vermelhos. O objetivo da aula é pô-los verdes, um TODO de cada vez.
+// Tests for the main screen. Run with: flutter test
+// They start red. The goal of the class is to turn them green, one TODO at a time.
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -8,7 +8,7 @@ import 'package:tempo_acores/main.dart';
 void main() {
   testWidgets('TODO 1: o ecrã mostra Ponta Delgada com um ícone e uma imagem',
       (tester) async {
-    await tester.pumpWidget(const TempoApp());
+    await tester.pumpWidget(const WeatherApp());
 
     expect(find.text('TODO 1: substitui por um cartão'), findsNothing,
         reason: 'O texto do TODO 1 ainda está no ecrã.');
@@ -22,14 +22,14 @@ void main() {
 
   testWidgets('TODO 3: a data de hoje aparece por baixo do título',
       (tester) async {
-    await tester.pumpWidget(const TempoApp());
+    await tester.pumpWidget(const WeatherApp());
 
-    final data = find.byKey(const Key('data-hoje'));
-    expect(data, findsOneWidget,
-        reason: 'Falta um Text com key: const Key(\'data-hoje\').');
+    final date = find.byKey(const Key('today-date'));
+    expect(date, findsOneWidget,
+        reason: 'Falta um Text com key: const Key(\'today-date\').');
 
-    final texto = tester.widget<Text>(data).data ?? '';
-    expect(texto, contains('${DateTime.now().day}'),
-        reason: 'O texto "$texto" não tem o dia de hoje. Usa DateFormat do intl.');
+    final text = tester.widget<Text>(date).data ?? '';
+    expect(text, contains('${DateTime.now().day}'),
+        reason: 'O texto "$text" não tem o dia de hoje. Usa DateFormat do intl.');
   });
 }

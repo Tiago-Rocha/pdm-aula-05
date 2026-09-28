@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
-import 'cartao_localidade.dart';
+import 'location_card.dart';
 
 void main() {
-  runApp(const TempoApp());
+  runApp(const WeatherApp());
 }
 
-/// Raiz da app: um MaterialApp por app, com o tema e o primeiro ecrã.
-class TempoApp extends StatelessWidget {
-  const TempoApp({super.key});
+/// App root: one MaterialApp per app, with the theme and the first screen.
+class WeatherApp extends StatelessWidget {
+  const WeatherApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,21 +19,21 @@ class TempoApp extends StatelessWidget {
       theme: ThemeData(
         colorSchemeSeed: Colors.teal,
         useMaterial3: true,
-        textTheme: GoogleFonts.interTextTheme(), // TODO 3: toda a app usa Inter
+        textTheme: GoogleFonts.interTextTheme(), // TODO 3: whole app uses Inter
       ),
-      home: const EcraInicial(),
+      home: const HomeScreen(),
     );
   }
 }
 
-/// Primeiro ecrã: um Scaffold por ecrã, com AppBar e o conteúdo no body.
-class EcraInicial extends StatelessWidget {
-  const EcraInicial({super.key});
+/// First screen: one Scaffold per screen, with an AppBar and the body.
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // TODO 3: data de hoje. Em inglês por agora; o pt_PT fica para a aula 9.
-    final hoje = DateFormat('EEEE, d MMMM').format(DateTime.now());
+    // TODO 3: today's date. In English for now; pt_PT comes in class 9.
+    final today = DateFormat('EEEE, d MMMM').format(DateTime.now());
 
     return Scaffold(
       appBar: AppBar(title: const Text('Tempo Açores')),
@@ -43,8 +43,8 @@ class EcraInicial extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              hoje,
-              key: const Key('data-hoje'),
+              today,
+              key: const Key('today-date'),
               style: Theme.of(context).textTheme.titleMedium,
             ),
             const SizedBox(height: 12),
@@ -58,19 +58,19 @@ class EcraInicial extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 12),
-            // TODO 2: três localidades, cada uma no nosso widget.
-            // const é possível porque o construtor é const e os argumentos
-            // são literais.
-            const CartaoLocalidade(nome: 'Ponta Delgada', temperatura: 21.3),
-            const CartaoLocalidade(
-              nome: 'Angra do Heroísmo',
-              temperatura: 20.1,
-              icone: Icons.cloud,
+            // TODO 2: three locations, each one in our own widget.
+            // const is possible because the constructor is const and the
+            // arguments are literals.
+            const LocationCard(name: 'Ponta Delgada', temperature: 21.3),
+            const LocationCard(
+              name: 'Angra do Heroísmo',
+              temperature: 20.1,
+              icon: Icons.cloud,
             ),
-            const CartaoLocalidade(
-              nome: 'Horta',
-              temperatura: 19.4,
-              icone: Icons.umbrella,
+            const LocationCard(
+              name: 'Horta',
+              temperature: 19.4,
+              icon: Icons.umbrella,
             ),
           ],
         ),

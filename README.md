@@ -32,12 +32,12 @@ Todos os repositórios das aulas seguem esta forma.
 | TODO | O que fazer | Teste que fica verde |
 |---|---|---|
 | 1 | Substituir o `Text` do `body` pela `Column` do slide: nome da localidade, ícone, imagem de `assets/img/sao_miguel.jpg` e temperatura num `Container` com borda. | `TODO 1` em `test/widget_test.dart` |
-| 2 | Criar `lib/cartao_localidade.dart` com o widget `CartaoLocalidade(nome, temperatura, icone)`, em que `icone` é opcional com valor por defeito. Usar três no `body`: Ponta Delgada, Angra do Heroísmo e Horta. | os três `TODO 2` em `test/cartao_localidade_test.dart` |
-| 3 | `flutter pub add google_fonts intl`. Aplicar uma fonte a toda a app e mostrar a data de hoje por baixo do título num `Text` com `key: const Key('data-hoje')`. | `TODO 3` em `test/widget_test.dart` |
+| 2 | Criar `lib/location_card.dart` com o widget `LocationCard(name, temperature, icon)`, em que `icon` é opcional com valor por defeito. Usar três no `body`: Ponta Delgada, Angra do Heroísmo e Horta. | os três `TODO 2` em `test/location_card_test.dart` |
+| 3 | `flutter pub add google_fonts intl`. Aplicar uma fonte a toda a app e mostrar a data de hoje por baixo do título num `Text` com `key: const Key('today-date')`. | `TODO 3` em `test/widget_test.dart` |
 
-Até criares `lib/cartao_localidade.dart`, o ficheiro `test/cartao_localidade_test.dart` não compila e o `flutter analyze` mostra erros nesse ficheiro. É esperado: desaparecem no TODO 2.
+Até criares `lib/location_card.dart`, o ficheiro `test/location_card_test.dart` não compila e o `flutter analyze` mostra erros nesse ficheiro. É esperado: desaparecem no TODO 2.
 
-No fim, commit com a mensagem `feat: cartão de localidade e fontes`.
+No fim, commit com a mensagem `feat: location card and fonts`.
 
 ## Trabalho de casa
 
